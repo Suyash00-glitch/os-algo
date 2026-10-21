@@ -1,0 +1,74 @@
+@import "tailwindcss";
+
+@layer base {
+  html, body {
+    background-color: #000000;
+    color: #ffffff;
+    font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", Helvetica, Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+  }
+}
+
+/* Strict Monochrome Scrollbars */
+::-webkit-scrollbar {
+  width: 7px;
+  height: 7px;
+}
+::-webkit-scrollbar-track {
+  background: #000000;
+}
+::-webkit-scrollbar-thumb {
+  background: #262626;
+  border-radius: 2px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #404040;
+}
+
+/* Strict Monochrome Panels */
+.mono-panel {
+  background-color: #0a0a0a;
+  border: 1px solid #262626;
+}
+
+.mono-card {
+  background-color: #121212;
+  border: 1px solid #262626;
+}
+
+.mono-input {
+  background-color: #000000;
+  border: 1px solid #333333;
+  color: #ffffff;
+}
+
+.mono-input:focus {
+  outline: none;
+  border-color: #737373;
+}
+
+/* Monochrome Diagonal Stripes for Context Switch */
+.cs-striped {
+  background-color: #171717;
+  background-image: repeating-linear-gradient(
+    45deg,
+    #262626,
+    #262626 6px,
+    #171717 6px,
+    #171717 12px
+  );
+}
+
+/* Monochrome Pattern for CPU Idle */
+.idle-striped {
+  background-color: #0a0a0a;
+  background-image: repeating-linear-gradient(
+    -45deg,
+    #141414,
+    #141414 4px,
+    #0a0a0a 4px,
+    #0a0a0a 8px
+  );
+}
